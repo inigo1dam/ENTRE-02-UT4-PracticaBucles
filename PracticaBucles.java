@@ -31,7 +31,7 @@ public class PracticaBucles {
      *   Utiliza solo bucles while
      */
     public void generarNumeros(int n)   {
-       //TODO
+        //TODO
 
     }
 
@@ -53,10 +53,24 @@ public class PracticaBucles {
      *   
      */
     public int obtenerNumeroSinCeros(int numero)   {
-        aux = 
-        while () {
+        int uax = numero;
+        String resultado = "";
+        int numEntero = 0;
+        while(uax > 0){
+            int resto = uax % 10;
+            if (resto != 0 ) {
+                resultado += resto;
+            }
+            uax = uax / 10;    
+            numEntero = Integer.parseInt(resultado);
         }
-        return 0;
+        int cifra, inverso = 0;
+        while(numEntero!=0){
+            cifra = numEntero%10;
+            inverso = (inverso * 10) + cifra;
+            numEntero/=10;
+        }
+        return inverso;
     }
 
     /**
@@ -78,7 +92,7 @@ public class PracticaBucles {
      *   
      */
     public void escribirLetraN(int altura)    {
-       //TODO
+        //TODO
 
     }
 
@@ -87,11 +101,9 @@ public class PracticaBucles {
      *  con bucles for
      */
     private void escribirCaracter(char caracter, int n)    {
-       //TODO
-       
-       
-       
-       
+        while (n >= 0 ) {
+            System.out.println(caracter);
+            n--;
+        }
     }
-
 }
