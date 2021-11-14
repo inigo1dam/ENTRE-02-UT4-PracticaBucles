@@ -55,7 +55,7 @@ public class PracticaBucles {
             if(numerogenerados % 10 == 0 ||numerogenerados % 10 == 5) {
                 System.out.println();
             }
-            
+
             if(numerogenerado % 2 != 0) {
                 impares = impares + numerogenerado;
             }
@@ -119,10 +119,14 @@ public class PracticaBucles {
      *   
      */
     public void escribirLetraN(int altura)    {
-        for(altura= 0;altura >2;altura--) {
+        for(altura = 0;altura >2;altura--) {
             char caracter = 0;
             int n = 0;
-            System.out.println("\n @ @   @");
+            String hola="";
+            System.out.println("@@"+hola+"@");
+            for(altura = 0;altura >2;altura--){
+                hola = "";
+            }
             escribirCaracter(caracter, n);
         }
     }
