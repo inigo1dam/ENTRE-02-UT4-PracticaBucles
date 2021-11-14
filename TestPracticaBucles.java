@@ -7,7 +7,6 @@ import java.util.Scanner;
  */
 public class TestPracticaBucles
 {
-
     /**
      *  Punto de entrada a la aplicación
      *  - define y crea el teclado  
@@ -24,11 +23,15 @@ public class TestPracticaBucles
      *  
      */
     public static void main(String[] args)    {
-        //TODO
-        
-        
-        
-        
+        Scanner sc = new Scanner(System.in);  //Se crea Scanner
+        System.out.print("Introduzca el numero maximo de numeros a generar ");
+        int n = sc.nextInt(); //Escribir
+        PracticaBucles.generarNumeros(n);
+        Utilidades.hacerPausa();
+        Utilidades.borrarPantalla();
+        System.out.print("Introduzca un Valor Para la Altura ");
+        int altura = sc.nextInt(); //Escribir
+        PracticaBucles.escribirLetraN(altura);
     }
-}
+} 
 
