@@ -42,12 +42,16 @@ public class PracticaBucles {
         total = total + numerogenerado;
         int impares = 0;
         int maximo = 0;
-        while (numerogenerado == 0 ||numerogenerados <= n ) {
+        while (numerogenerado != 0 && numerogenerados <= n ) {
             numerogenerado = generador.nextInt(6001)-1000;
             System.out.printf("%15d"+"%s"+"%10d",numerogenerado,":",obtenerNumeroSinCeros(numerogenerado));
             total = total + numerogenerado;
             numerogenerados ++;
             media = total / numerogenerados;
+            if(numerogenerado % 2 != 0) {
+                impares = impares + numerogenerado;
+            }
+
             if(numerogenerado > maximo && numerogenerado %2 == 0) {
                 maximo = numerogenerado;
             }
@@ -56,9 +60,6 @@ public class PracticaBucles {
                 System.out.println();
             }
 
-            if(numerogenerado % 2 != 0) {
-                impares = impares + numerogenerado;
-            }
         }
         System.out.println("\n" + "\n");
         System.out.printf("%25s"+"%10.2f","Media :" ,media);
@@ -118,19 +119,13 @@ public class PracticaBucles {
      *  
      *   
      */
-    public void escribirLetraN(int altura)    {
-        for(altura = 0;altura >2;altura--) {
-            char caracter = 0;
-            int n = 0;
-            String hola="";
-            System.out.println("@@"+hola+"@");
-            for(altura = 0;altura >2;altura--){
-                hola = "";
-            }
-            escribirCaracter(caracter, n);
+    public void escribirLetraN( int altura)    {
+        System.out.println("Letra N  Altura:"+ altura);
+        for(int i = 1;i <= altura;i++) {
+            escribirCaracter(CARACTER,1);
         }
-    }
 
+    }
     /**
      *  escribe n veces el caracter  indicado en la misma línea
      *  con bucles for

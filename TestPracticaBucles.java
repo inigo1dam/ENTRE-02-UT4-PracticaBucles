@@ -23,15 +23,24 @@ public class TestPracticaBucles
      *  
      */
     public static void main(String[] args)    {
-        Scanner sc = new Scanner(System.in);  //Se crea Scanner
-        System.out.print("Introduzca el numero maximo de numeros a generar ");
+        Scanner sc = new Scanner(System.in);
+        PracticaBucles practicaBucles = new PracticaBucles();
+        System.out.println("Introduzca el numero maximo de numeros a generar ");
         int n = sc.nextInt(); //Escribir
-        PracticaBucles.generarNumeros(n);
+        if(0 > n)  {
+            System.out.println("Valor incorrecto , escriba un valor + ");
+            n = sc.nextInt(); //Escribir
+        }
+        practicaBucles.generarNumeros(n);
         Utilidades.hacerPausa();
         Utilidades.borrarPantalla();
-        System.out.print("Introduzca un Valor Para la Altura ");
+        System.out.println("Introduzca un Valor Para la Altura ");
         int altura = sc.nextInt(); //Escribir
-        PracticaBucles.escribirLetraN(altura);
+        if(altura <= 3 && altura <= 10)  {
+            System.out.print("Valor incorrecto para la Altura ");
+            altura = sc.nextInt(); //Escribir
+        }
+        practicaBucles.escribirLetraN(altura);
     }
 } 
 
